@@ -7,7 +7,7 @@ public class Cola {
         String queue = "sensores";
         BrokerService brokerService=new BrokerService();
         try{
-            brokerService.addConnector("tcp://localhost:61616");
+            brokerService.addConnector("tcp://0.0.0.0:61616");
             brokerService.start();
         }catch(Exception e){
             e.printStackTrace();

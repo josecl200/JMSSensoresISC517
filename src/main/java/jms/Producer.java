@@ -16,7 +16,7 @@ public class Producer {
     static Gson gson = new Gson();
     static Random random;
     public void sendMessage(String topicName) throws JMSException {
-        ActiveMQConnectionFactory factory=new ActiveMQConnectionFactory("failover:tcp://localhost:61616");
+        ActiveMQConnectionFactory factory=new ActiveMQConnectionFactory("failover:tcp://0.0.0.0:61616");
         Connection connection=factory.createConnection("root","toor");
         connection.start();
         Session sesion = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
